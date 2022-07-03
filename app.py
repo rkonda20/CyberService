@@ -5,18 +5,14 @@ from flask import Response
 
 app = Flask(__name__)
 
-'''***
+
 @app.route('/<random_string>')
 def returnBackwardsString(random_string):
     """Reverse and return the provided URI"""
     str = "".join(reversed(random_string))
     response_text = '{ "message":' + str +  '}'
-    print("******* Response - " + response_text)
-    response = Response(response_text, 200, mimetype='application/json')
-    print("******* Response obj - " + response)
-    return response
-#   return "".join(reversed(random_string))
-'''
+    return str
+
 
 @app.route('/')
 # ‘/’ URL is bound with hello_world() function.
